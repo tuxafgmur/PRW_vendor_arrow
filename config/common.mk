@@ -100,5 +100,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Packages
 include vendor/arrow/config/packages.mk
 
+# Extra apps
+-include vendor/extraapps/extraapps.mk
+
 # Props
 include vendor/arrow/config/props.mk
