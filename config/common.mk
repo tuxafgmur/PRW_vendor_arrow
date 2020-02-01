@@ -60,7 +60,7 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/arrow/build/tools/backuptool.sh:install/bin/backuptool.sh \
     vendor/arrow/build/tools/backuptool.functions:install/bin/backuptool.functions \
-    vendor/arrow/build/tools/50-cm.sh:system/addon.d/50-cm.sh
+    vendor/arrow/build/tools/50-rom.sh:system/addon.d/50-rom.sh
 
 # World APN list
 PRODUCT_COPY_FILES += \
