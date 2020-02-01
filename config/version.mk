@@ -13,10 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ARROW_MOD_VERSION = v9.0
+ARROW_MOD_VERSION = 9.0
 
 ifndef ARROW_BUILD_TYPE
-    ARROW_BUILD_TYPE := UNOFFICIAL
+    ARROW_BUILD_TYPE := Dhollmen
 endif
 
 ifeq ($(ARROW_BETA),true)
@@ -37,8 +37,7 @@ PRODUCT_PACKAGES += \
 
     endif
     ifneq ($(IS_OFFICIAL), true)
-       ARROW_BUILD_TYPE := UNOFFICIAL
-       $(error Device is not official "$(FOUND)")
+       ARROW_BUILD_TYPE := Dhollmen
     endif
 endif
 
