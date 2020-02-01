@@ -20,7 +20,8 @@ PRODUCT_PACKAGES += \
     Launcher3QuickStep \
     OmniJaws \
     Recorder \
-    Stk
+    Stk \
+    WallpaperPicker
 
 # Themes Dark
 PRODUCT_PACKAGES += \
