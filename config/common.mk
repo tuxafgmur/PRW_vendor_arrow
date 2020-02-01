@@ -79,11 +79,14 @@ PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 # leave less information available via JDWP.
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
+# Sounds
+PRODUCT_PROPERTY_OVERRIDES += \
+   ro.config.ringtone=Selenium.ogg \
+   ro.config.notification_sound=Omicron.ogg \
+   ro.config.alarm_alert=Onyx.ogg
+
 # Packages
 include vendor/arrow/config/packages.mk
 
 # Props
 include vendor/arrow/config/props.mk
-
-# Sounds
-include vendor/arrow/config/sounds.mk
