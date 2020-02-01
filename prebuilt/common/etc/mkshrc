@@ -1,0 +1,8 @@
+# Minimal /system/etc/mkshrc for Android
+# Copyright (c) 2010, 2012, 2013, 2014 Thorsten Glaser <tg@mirbsd.org>
+
+if (( USER_ID )); then PS1='user $PWD: '; else PS1='[root] $PWD: '; fi
+alias cd..='cd ..'
+alias la='ls -al'
+alias ll='ls -l'
+alias ls='ls -an'

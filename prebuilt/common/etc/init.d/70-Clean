@@ -1,0 +1,44 @@
+#!/system/bin/sh
+# Copyright 2014-2019 Tuxafgmur - Dhollmen
+
+[ -f /data/.lastclean ] && . /data/.lastclean
+
+LASTDATE=$(($LASTDATE + 432000))
+
+TODAY=$(date -u +%s)
+
+if [ $TODAY -ge $LASTDATE ]; then
+
+    rm -f  /data/anr/*
+	rm -fr /data/local/tmp/*
+	rm -f  /data/tombstones/*
+	rm -f  /data/system/uiderrors.txt
+	rm -f  /data/system/dropbox/*
+	for q in `find /data/vendor/tombstones -type f`; do
+        rm $q
+    done
+
+	cd /data/dalvik-cache/arm
+	if [ "$?" != "0" ]; then
+		for q in *; do
+			a=$(echo $q|cut -d'@' -f1)
+			b=$(echo $q|cut -d'@' -f2)
+			c=$(echo $q|cut -d'@' -f3)
+			case $c in
+				boot.art)
+				;;
+				boot.oat)
+				;;
+				boot.vdex)
+				;;
+				*)	FILE="/$a/$b/$c"
+					[ -e $FILE ] || rm $q
+				;;
+			esac
+		done
+	fi
+
+	LASTDATE=$TODAY
+	echo "LASTDATE=$LASTDATE" > /data/.lastclean
+
+fi

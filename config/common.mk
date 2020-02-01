@@ -15,8 +15,20 @@
 include vendor/arrow/config/version.mk
 
 PRODUCT_COPY_FILES += \
-    vendor/arrow/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/arrow/prebuilt/common/bin/sysinit:system/bin/sysinit  \
+    vendor/arrow/prebuilt/common/bin/sysinit:system/bin/sysinit \
+    vendor/arrow/prebuilt/common/xbin/busybox:system/xbin/busybox \
+    vendor/arrow/prebuilt/common/xbin/bzip2:system/xbin/bzip2 \
+    vendor/arrow/prebuilt/common/xbin/pigz:system/xbin/pigz \
+    vendor/arrow/prebuilt/common/xbin/sqlite3:system/xbin/sqlite3 \
+    vendor/arrow/prebuilt/common/xbin/sysro:system/xbin/sysro \
+    vendor/arrow/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
+    vendor/arrow/prebuilt/common/xbin/unrar:system/xbin/unrar \
+    vendor/arrow/prebuilt/common/xbin/unzip:system/xbin/unzip \
+    vendor/arrow/prebuilt/common/xbin/xz:system/xbin/xz \
+    vendor/arrow/prebuilt/common/xbin/zip:system/xbin/zip \
+    vendor/arrow/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
+    vendor/arrow/prebuilt/common/etc/init.d/70-Clean:system/etc/init.d/70-Clean \
+    vendor/arrow/prebuilt/common/etc/init.d/80-Fstrim:system/etc/init.d/80-Fstrim
 
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/arrow/overlay/common \
