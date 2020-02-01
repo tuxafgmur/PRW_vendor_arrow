@@ -16,21 +16,10 @@
 # Required packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
-    Calendar \
-    ExactCalculator \
-    LatinIME \
     Launcher3QuickStep \
-    messaging \
     OmniJaws \
     Recorder \
-    stats \
     Stk
-
-ifeq ($(TARGET_EXCLUDE_CHROMIUM),true)
-  PRODUCT_PACKAGES += Browser
-else
-  PRODUCT_PACKAGES += Chromium
-endif
 
 # Themes Dark
 PRODUCT_PACKAGES += \
@@ -92,7 +81,6 @@ PRODUCT_PACKAGES += \
 # Extra tools
 PRODUCT_PACKAGES += \
     7z \
-    bash \
     bzip2 \
     curl \
     getcap \
@@ -117,7 +105,6 @@ PRODUCT_PACKAGES += \
     tune2fs \
     unrar \
     unzip \
-    vim \
     wget \
     zip
 
