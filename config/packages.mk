@@ -16,6 +16,7 @@
 # Required packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
+    Calculator \
     Launcher3QuickStep \
     OmniJaws \
     Recorder \
