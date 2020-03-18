@@ -46,8 +46,10 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
 
 # init file
+ifneq ($(DEVICE_HAS_INITRC),true)
 PRODUCT_COPY_FILES += \
     vendor/arrow/prebuilt/common/etc/init.local.rc:system/etc/init/init.arrow.rc
+endif
 
 # Backup Tool
 ifeq ($(AB_OTA_UPDATER),true)
